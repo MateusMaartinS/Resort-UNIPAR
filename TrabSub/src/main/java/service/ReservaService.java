@@ -16,6 +16,9 @@ public class ReservaService {
     // metodo especial!!
     public List<Reserva> findByHospede(Hospede hospede){return this.reservaRepository.findByHospede(hospede);}
 
+    public List<Reserva> getAll(){return this.reservaRepository.findAll();}
+
+
     public Reserva save(Reserva reserva){return this.reservaRepository.save(reserva);}
 
     public Optional<Reserva> getById(int id){return  this.reservaRepository.findById(id);}

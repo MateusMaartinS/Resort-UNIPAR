@@ -22,4 +22,26 @@ public class QuartoService {
 
     public void deleteById(int id){this.quartoRepository.deleteById(id);}
 
+
+
+
+    public List<Quarto> buscarTodosDisponiveis() {
+        return this.quartoRepository.findByDisponivel(true);
+    }
+
+
+    public List<Quarto> buscarPorQtdMaxOcupantes(int qtdMaxOcupantes) {
+        return this.quartoRepository.findByQtdMaxOcupantes(qtdMaxOcupantes);
+    }
+
+
+    public List<Quarto> buscarTodosOcupados() {
+        return this.quartoRepository.findByDisponivel(false);
+    }
+
+
+    public List<Quarto> buscarTodosComVistaMarEDisponiveis() {
+        return this.quartoRepository.findByDisponivelAndVistaMar(true, true);
+    }
+
 }

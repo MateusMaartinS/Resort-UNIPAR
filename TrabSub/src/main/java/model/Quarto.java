@@ -24,5 +24,6 @@ public class Quarto {
     private BigDecimal valorDia;
     private Integer qtdMaxOcupantes;
     private String status;
+    private Boolean disponivel;
 
 }
